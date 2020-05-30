@@ -1,0 +1,31 @@
+#include <stdio.h>
+struct comp
+{
+   char name[25];
+   int age,sal;
+   long long int ph;
+};
+void main ()
+{
+  struct comp mem[3];
+  int i, j;
+  for(i=0;i<=2;i++)
+ {
+for(j=0;j<=2;j++) 
+{
+  printf("Enter name of employe:");
+  gets(mem[j].name);
+  printf("\nEnter the salary:");
+  scanf("%d",& mem[j].sal);
+  printf("\nEnter the age:");
+  scanf("%d",&mem[j].age);
+ printf("\nEnter the phone number: ");
+  scanf("%lli",&mem[j].ph);
+}
+}
+ for(i=0;i<=2;i++)
+ {printf("Name          Phone number        Age           Salary ");
+  printf("\n %c, %lli, %d, %d",mem[i].name, mem[i].ph,mem[i].age,mem[i].sal);
+
+}
+}

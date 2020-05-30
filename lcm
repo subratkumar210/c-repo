@@ -1,0 +1,27 @@
+#include <stdio.h>
+int lcm (int, int );
+ int main ()
+ 
+{ 
+   int a, b,c,n =1;
+   printf("Enter a number:");
+   scanf("%d",&a);
+   printf("\nEnter a number:");
+   scanf("%d",&b);
+   
+   c=lcm(a,b);
+   printf("\nLCM of %d,%d is %d",a, b, c);
+   return 0;
+}
+int lcm (int a, int b)
+{
+   static int n=1;
+  if(n%a==0&& n%b==0)
+  return n;
+ else 
+{
+   n++;
+   lcm(a,b);
+  return n;
+}
+}
